@@ -16,8 +16,9 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<!-- all Astun customisations -->
+		<link rel="stylesheet" href="custom/astun.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -43,145 +44,93 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Improving Dataset Quality through Metadata</h2>
+					<h3 style="color:var(--astun-indigo)">Improving Dataset Quality through Metadata</h3>
 					<p>
 						<small>Jo Cook | Astun Technology</small>
 					</p>
 				</section>
 
 
-				<section>
-					<h2 class="box">Who we are</h2>
-					<p class="box">We manage and host the SSDI</p>
-					<p class="box">Sit on IST36</p>
-					<p class="box">Chair the UK Gemini WG</p>
-					<p class="box">GeoNetwork PSC</p>
-					<aside class="notes">Our work focuses on GeoNetwork Open Source, but also the wider standards infrastructure</aside>
+				<section data-background-image="./images/landingpage.jpg" alt="Astun Technology Landing Page" data-background-size="cover">
+					<h3 class="box" style="background-color:var(--astun-red)">Who are Astun Technology?</h3>
+					<div class="r-stack">
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">We manage and host the SSDI for Scottish Government...</p>
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">...sit on BSI IST36</p>
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">...chair the UK Gemini WG</p>
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">...and sit on the GeoNetwork PSC</p>
+					<aside class="notes">Our work focuses on GeoNetwork Open Source, but also metadata in general and the wider geospatial standards infrastructure</aside>
+				</div>
+				</section>
+
+				<section data-background-image="./images/startingpoint.jpg" alt="Starting Arrow" data-background-size="cover">
+					<h3 class="box" style="background-color:var(--astun-indigo)">Our Starting Point</h3>
+					<div class="r-stack">
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-indigo)">There's an increasing focus on Data Quality across the Public Sector</p>
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-indigo)">and many frameworks and guidance on Quality Dimensions, and the Data Lifecycle</p>
+					</div>
+					<aside class="notes">People now understand the importance of data sharing and metadata, so we can now focus on improving what we share. Government Geospatial Commission, Data Quality Hub, EU Metadata Quality Assessment etc provide guidance</aside>
 				</section>
 
 				<section>
-					<h2 class="box">Background</h2>
-					<p class="box">Increasing focus on Data Quality across the Public Sector</p>
-					<aside class="notes">People now understand the importance of data sharing and metadata, so we can now focus on improving what we share</aside>
-				</section>
-
-				<section>
-					<h2 class="box">Best Practice</h2>
-					<p class="box">There are plenty of frameworks and guidance that talk about Quality Dimensions, and the Data Lifecycle</p>
-					<aside class="notes">Government Geospatial Commission, Data Quality Hub, EU Metadata Quality Assessment etc</aside>
-				</section>
-
-				<section>
-					<h2 class="box">Making Data FAIR</h2>
-					<p class="box">Data and Metadata Quality both contribute to Data Discovery and the FAIR principles</p>
+					<h3 class="box" style="background-color:var(--astun-blue)">Everyone wants to make Data FAIR</h3>
 					<img style="border:none; box-shadow:none; background:none" src="./images/fair.png" alt="fair principles" with="500"/>
-					<aside class="notes">Too long or too short titles, truncated abstracts/descriptions, duplicated records and so on cause indexed records to be down-ranked</aside>
+					<aside class="notes">Data and Metadata Quality both contribute to Data Discovery and the FAIR principles. For example, if titles are too long or too short, abstracts/descriptions are truncated , duplicated records and so on, this can cause indexed records to be down-ranked and therefore make them less findable</aside>
+				</section>
+
+				<section data-background-image="./images/facepalm.jpg" alt="Facepalm" data-background-size="cover">
+					<h3 class="box" style="background-color:var(--astun-orange)">But...</h3>
+					<p class="box fragment" style="background-color:var(--astun-orange)">There's little technical guidance on how to apply this In Real Life</p>
+					<aside class="notes">Encoding data quality and lineage in metadata is technically difficult. Standards documents cost money and are not the easiest to understand</aside>
+				</section>
+
+				<section data-background-image="./images/spanners.jpg" alt="Spanners" data-background-size="cover">
+					<h3 class="box" style="background-color:var(--astun-ochre)">Some Practical Fixes...</h3>
+					<aside class="notes">Recent innovations we've made in the catalogues we support to make all of this easier</aside>
 				</section>
 
 				<section>
-					<h2 class="box">But...</h2>
-					<p class="box">There's little technical guidance on how to apply this in real life</p>
-					<aside class="notes">Encoding data quality and lineage in metadata is technically difficult</aside>
+					<h3 class="box" style="background-color:var(--astun-red)">Gemini 2.3</h3>
+					<div class="r-stack">
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">Easier to use <a target="_blank" href="https://uat.scotgov.astuntechnology.com/geonetwork/srv/eng/catalog.search#/metadata/7e138b52-e8c6-41ee-99d1-9882b5e3025d">👉</a></p>
+					<p class="box fragment fade-in-then-out" style="background-color:var(--astun-red)">Better machine-readable output <a target="_blank" href="https://search.google.com/test/rich-results/result?id=sKRRE3TI1nPOgGVGj4D7Yw">👉</a></p>
+					</div>
+					<aside class="notes">We've made improvements to the Gemini 2.3 plugin for Geonetwork, part funded by Scottish Government around both ease of use and machine-readability</aside>
 				</section>
 
 				<section>
-					<h2 class="box">Some Practical Approaches</h2>
-					<p class="box">Recent innovations to make it easier</p>
+					<h3 class="box" style="background-color:var(--astun-indigo)">Data Quality and Lineage</h3>
+					<div class="r-stack">
+					<span class="box fragment fade-in-then-out" style="background-color:var(--astun-indigo)">
+						<p>Snippets</p>
+						<img src="./images/snippets.png" style="height:200px"/>
+					</span>
+					<span class="box fragment fade-in-then-out" style="background-color:var(--astun-indigo)">
+						<p>Drop-down pick lists</p>
+						<img src="./images/dropdowns.png" style="height:200px"/>
+					</span>
+					<span class="box fragment fade-in-then-out" style="background-color:var(--astun-indigo)">
+						<p>Visual changes for ambiguous elements</p>
+						<img src="./images/yesnomaybe.png" style="height:200px"/>
+					</span>
+					</div>
+					<aside class="notes">We've created snippets for the data quality elements so they can be picked from a list when editing records. We've done the same for lineage, to make it easier for people to include record more complex workflows and data lifecycles</aside>
 				</section>
 
 				<section>
-					<h2 class="box">The Gemini 2.3 plugin</h2>
-					<p class="box">Easier to use</p>
-					<p class="box">Easier to see guidance</p>
-					<p class="box">Better machine-readable output</p>
-					<aside class="notes">Funded by SSDI</aside>
-				</section>
-
-				<section>
-					<h2 class="box">Data Quality and Lineage</h2>
-					<p class="box">Snippets</p>
-					<p class="box">Drop-down pick lists</p>
-					<p class="box">Visual changes for ambiguous elements</p>
-				</section>
-
-				<section>
-					<h2 class="box">Dashboards</h2>
-					<p class="box">SEO</p>
-					<p class="box">Data Quality</p>
-					<p class="box">Visual changes for ambiguous elements</p>
+					<h3 class="box" style="background-color:var(--astun-teal)">Reporting</h3>
+					<div class="r-stack">
+					<span class="box" style="background-color:var(--astun-teal)">
+						<p>Dashboards for SEO and Data Quality metrics</p>
+						<img src="./images/zeppelin.png" style="height:200px"/>
+					</span>
+					</div>
+					<aside class="notes">There's more to come! We're developing more dashboards and reporting based on what people ask us for.</aside>
 				</section>
 
 
 
-				<section>
-					<h3>Best Practice</h3>
-				 <p><a href="https://www.gov.uk/government/collections/best-practice-guidance-and-tools-for-geospatial-data-managers" target="_blank">Geospatial Commission Best Practice Guides</a> state that data should be <span class="fragment sentence">Findable</span>, <span class="fragment sentence">Accessible</span>, <span class="fragment sentence">Interoperable</span>, and <span class="fragment sentence">Reusable</span> (FAIR)</p>
-				 <img style="border:none; box-shadow:none; background:none" src="./images/fair.png" alt="fair principles" with="500"/>
-				 <aside class="notes">FAIR Principles emphasise machine-actionability, eg capacity of computational systems to find, access, interoperate, reuse data with minimal human intervention, but can be taken to encompass human interactions with data/metadata as well</aside>
-				</section>
-
-				<section>
-					<h2>Recommendations</h2>
-					<p>Data sharing is good (obvs) but most searches come from search engines, not direct searches in portals</p>
-					<p class="fragment">To help people find things we need to treat data and metadata as web content and employ search-engine optimisation (SEO) techniques</p>
-					<p class="fragment">We need to use structured data to help search engines provide a richer view of our content</p>
-				</section>
-
-				<section>
-					<p><span class="fragment sentence">SEO</span> is about making sure search engines display our content as high up in search results as possible</p>
-					<p>We do this by ensuring that we don't have any data quality issues that might cause down-ranking</p>
-					<aside class="notes">These are things like too long or too short titles, truncated abstracts/descriptions, duplicated records and so on</aside>
-				</section>
-
-				<section>
-					<h3>Data quality reports in zeppelin analytics</h3>
-					<img src="./images/dataquality.png" alt="data quality" with="800"/>
-				</section>
-
-				<section>
-					<p><span class="fragment sentence">Structured data</span> is the fun part!</p>
-					<p>By mapping terms in our content to <a href="https://schema.org/Dataset" target="_blank">schema.org</a> types we tell google what our page is about</p>
-					<p>which in turn helps it decide how to display the result</p>
-					<aside class="notes">COVID data is the gold standard but that's a special case, recipes and opening times are a more achievable comparison</aside>
-				</section>
-
-				<section>
-					<img src="./images/covid.png" alt="google search covid" with="800"/>
-				</section>
-
-				<section>
-					<img src="./images/applepie.png" alt="google search applepie" with="800"/>
-				</section>
-
-				<section>
-					<p>We can also use <span class="fragment sentence">web analytics</span> to provide insight on how people are using our data and our portals</p>
-					<p>providing insights into numbers of visitors, what data is being downloaded, where people are from, etc</p>
-				</section>
-
-				<section>
-					<h3>Examples from Scottish Spatial Data Infrastructure</h3>
-					<p><a href="https://spatialdata.gov.scot/geonetwork/srv/eng/catalog.search#/metadata/4268B281-F173-4B7E-B2AE-1583C659253C" target="_blank">Metadata in GeoNetwork</a>/<a href="https://search.google.com/test/rich-results?id=lK4abv8yAGiXyq_uva_PlQ" target="_blank">Structured Data</a>/<a href="https://datasetsearch.research.google.com/search?query=Dedicated%20Woodlands&docid=KHbTXAGRdoIv1Ml1AAAAAA%3D%3D" target="_blank">Google Dataset Search</a>/<a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a>/<a href="https://datastudio.google.com/u/0/reporting/acd003ea-50a9-4b85-9dfb-8785df7d5f1c/page/WyBv?utm_source=google-datastudio&utm_medium=email&utm_campaign=scheduled-report" target="_blank">Web Console</a></p>
-				</section>
-
-				<section>
-					<h3>This is not limited to metadata</h3>
-					<p>Structured data could be applied to lots of our products, like spotlight or other single-use maps</p>
-					<p>Web analytics could help us and customers understand how data and pages are being used</p>
-					<aside class="notes">Unfortunately the schema.org type "map" is tied to a place, not a subject, so most of what we do currently works best as a "dataset"</aside>
-				</section>
-
-
-				<section  data-background-image="./images/flamingkitty.jpg" alt="flaming kitty" data-background-size="cover">
-					<h3 class="box">What's in it for us?</h3>
-					<p class="fragment" style="line-height:175%"><span class="box">No one else seems to be doing it!</span></p>
-					<p class="fragment" style="line-height:175%"><span class="box">It's very topical</span></p>
-					<p class="fragment" style="line-height:175%"><span class="box">It adds value to our offering</span></p>
-					<p class="fragment" style="line-height:175%"><span class="box">It's a relatively quick win!</span></p>
-					<aside class="notes">Good time to do it, customer insights, not much actual work to implement?</aside>
-				</section>
-
-				<section data-background-image="./images/happy.jpg" alt="happy puppy" data-background-size="cover">
-					<h2 class="box">Thank You!</h2>
+				<section data-background-image="./images/questions.jpg" alt="Any Questions" data-background-size="full">
+					<h3 class="box" style="background-color:var(--astun-teal); margin-top:0px !important">Any Questions?</h3>
 				</section>
 				
 			</div>
@@ -196,11 +145,10 @@
 		</div>
 
 		<script src="dist/reveal.js"></script>
-
-		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 
 			// More info https://github.com/hakimel/reveal.js#configuration
@@ -210,12 +158,12 @@
 				center: true,
 				hash: true,
 				slideNumber: "c/t",
-				showNotes: "separate-page",
+				showNotes: "true",
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 // Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
 			});
 
 			Reveal.configure({ pdfMaxPagesPerSlide: 1 })
